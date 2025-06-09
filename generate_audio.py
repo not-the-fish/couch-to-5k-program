@@ -11,9 +11,8 @@ import time
 from pathlib import Path
 from typing import List, Tuple, Dict
 import requests
-from elevenlabs import client, save
+from elevenlabs.client import ElevenLabs
 from pydub import AudioSegment
-from pydub.silence import AudioSegment as silence
 import argparse
 
 class C25KAudioGenerator:
@@ -27,8 +26,7 @@ class C25KAudioGenerator:
         """
         self.api_key = api_key
         self.voice_id = voice_id
-        self.client = client
-        self.client.set_api_key(api_key)
+        self.client = ElevenLabs(api_key=api_key)
         
         # Create output directory
         self.output_dir = Path("generated_audio")
@@ -74,15 +72,19 @@ class C25KAudioGenerator:
         """
         try:
             # Generate audio using ElevenLabs
-            audio_data = self.client.generate(
+            audio_generator = self.client.text_to_speech.convert(
                 text=text,
-                voice=self.voice_id,
-                model="eleven_monolingual_v1"
+                voice_id=self.voice_id,
+                model_id="eleven_monolingual_v1"
             )
+            
+            # Convert generator to bytes
+            audio_bytes = b"".join(audio_generator)
             
             # Save to temporary file and load as AudioSegment
             temp_file = "temp_speech.mp3"
-            save(audio_data, temp_file)
+            with open(temp_file, "wb") as f:
+                f.write(audio_bytes)
             
             audio_segment = AudioSegment.from_mp3(temp_file)
             
