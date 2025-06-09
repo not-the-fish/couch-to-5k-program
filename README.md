@@ -12,16 +12,16 @@ This repository contains everything you need for a complete Couch to 5K training
 
 ## 📅 Program Schedule
 
-- **Start Date**: Monday, June 9, 2024
-- **Schedule**: Monday, Wednesday, Friday at 7:00 AM CDT
+- **Start Date**: Monday, June 9, 2025
+- **Schedule**: Monday, Wednesday, Friday at 12:00 PM UTC
 - **Duration**: 9 weeks (27 total workouts)
-- **Graduation**: Friday, August 9, 2024
+- **Graduation**: Friday, August 8, 2025
 
 ## 📁 Repository Contents
 
 ### `couch_to_5k_calendar.ics`
 Google Calendar-compatible file with all 27 workouts scheduled. Import this file to get:
-- Precise workout scheduling (Mon/Wed/Fri at 7:00 AM CDT)
+- Precise workout scheduling (Mon/Wed/Fri at 12:00 PM UTC)
 - Complete workout descriptions for each day
 - Milestone celebrations and graduation ceremony
 
@@ -83,7 +83,7 @@ python generate_c25k_audio.py
 4. Use during workouts for guided coaching
 
 ### 4. Start Training!
-- Begin with Week 1 on Monday, June 9, 2024
+- Begin with Week 1 on Monday, June 9, 2025
 - Follow the calendar schedule: Monday, Wednesday, Friday
 - Use audio coaching for perfect timing and motivation
 
@@ -103,9 +103,9 @@ python generate_c25k_audio.py
 
 ## 🏆 Major Milestones
 
-- **Week 5, Day 3**: First 20-minute continuous jog (July 12, 2024)
-- **Week 6, Day 3**: First 25-minute continuous jog (July 19, 2024)
-- **Week 9, Day 3**: Graduation - 30-minute continuous jog (August 9, 2024) 🎓
+- **Week 5, Day 3**: First 20-minute continuous jog (July 11, 2025)
+- **Week 6, Day 3**: First 25-minute continuous jog (July 18, 2025)
+- **Week 9, Day 3**: Graduation - 30-minute continuous jog (August 8, 2025) 🎓
 
 ## 🎯 Features
 
@@ -120,7 +120,7 @@ python generate_c25k_audio.py
 ## 🛠️ Technical Details
 
 - **Calendar Format**: ICS (iCalendar) - compatible with Google Calendar, Outlook, Apple Calendar
-- **Time Zone**: All workouts scheduled for 7:00 AM CDT
+- **Time Zone**: All workouts scheduled for 12:00 PM UTC
 - **Audio Scripts**: Text format ready for text-to-speech conversion
 - **Audio Generation**: Python scripts using ElevenLabs API
 - **Total Duration**: Ranges from 28-40 minutes depending on week
@@ -179,4 +179,4 @@ couch-to-5k-program/
 
 ---
 
-**Ready to transform your life? Your journey from couch to 5K starts Monday, June 9, 2024 at 7:00 AM CDT!** 🏃‍♂️✨ 
+**Ready to transform your life? Your journey from couch to 5K starts Monday, June 9, 2025 at 12:00 PM UTC!** 🏃‍♂️✨ 
