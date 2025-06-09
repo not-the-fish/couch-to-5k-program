@@ -1,0 +1,24 @@
+{
+  "elevenlabs": {
+    "api_key": "YOUR_ELEVENLABS_API_KEY_HERE",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "voice_name": "Rachel (default)",
+    "model": "eleven_monolingual_v1"
+  },
+  "audio_settings": {
+    "bitrate": "128k",
+    "format": "mp3",
+    "output_directory": "generated_audio"
+  },
+  "voice_options": {
+    "Rachel": "21m00Tcm4TlvDq8ikWAM",
+    "Domi": "AZnzlk1XvdvUeBnXmlld",
+    "Bella": "EXAVITQu4vr4xnSDxMaL",
+    "Antoni": "ErXwobaYiN019PkySvjV",
+    "Elli": "MF3mGyEYCl7XYWbV9V6O",
+    "Josh": "TxGEqnHWrfWFTfGW9XjX",
+    "Arnold": "VR6AewLTigWG4xSOukaG",
+    "Adam": "pNInz6obpgDQGcFmaJgB",
+    "Sam": "yoZ06aMxZJJ28mfd3POQ"
+  }
+} 

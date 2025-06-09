@@ -7,6 +7,7 @@ A comprehensive 9-week program to take you from couch to running 5K (30 minutes)
 This repository contains everything you need for a complete Couch to 5K training program:
 - **Google Calendar Integration**: Importable ICS file with all 27 workouts scheduled
 - **Audio Coaching Scripts**: 14 detailed scripts for voice-guided workouts
+- **Audio Generation Tools**: Python scripts to create professional AI-powered audio files
 - **Progressive Training Plan**: Scientifically designed 9-week progression
 
 ## 📅 Program Schedule
@@ -36,6 +37,22 @@ Key milestone scripts:
 - `Week6_Day3_Audio_Script.txt` - First 25-minute continuous jog
 - `Week9_Day3_FINAL_Audio_Script.txt` - Graduation day! 🎉
 
+### 🎵 Audio Generation System
+**NEW**: Automatically convert text scripts to professional audio files!
+
+- **`generate_audio.py`** - Full-featured audio generation engine
+- **`generate_c25k_audio.py`** - Easy-to-use interactive script
+- **`requirements.txt`** - Python dependencies
+- **`config.json.template`** - Configuration template
+- **`AUDIO_SETUP_GUIDE.md`** - Complete setup and usage guide
+
+Features:
+- **ElevenLabs AI Integration**: Professional voice generation
+- **Precise Timing**: Voice cues at exact workout moments
+- **Multiple Voices**: Choose from various motivational voices
+- **Cost Effective**: Generate all files for ~$5/month
+- **Customizable**: Edit scripts for personal touches
+
 ## 🚀 Getting Started
 
 ### 1. Import Calendar
@@ -44,13 +61,28 @@ Key milestone scripts:
 3. Select "Import"
 4. Upload `couch_to_5k_calendar.ics`
 
-### 2. Create Audio Files
+### 2. Generate Audio Files (NEW!)
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure API key
+cp config.json.template config.json
+# Edit config.json with your ElevenLabs API key
+
+# Generate audio files
+python generate_c25k_audio.py
+```
+
+**📖 See `AUDIO_SETUP_GUIDE.md` for detailed instructions**
+
+### 3. Create Audio Files (Manual)
 1. Choose a text-to-speech service (ElevenLabs, Google TTS, etc.)
 2. Copy script text from the appropriate week's file
 3. Generate audio files with motivational voice
 4. Use during workouts for guided coaching
 
-### 3. Start Training!
+### 4. Start Training!
 - Begin with Week 1 on Monday, June 9, 2024
 - Follow the calendar schedule: Monday, Wednesday, Friday
 - Use audio coaching for perfect timing and motivation
@@ -81,16 +113,28 @@ Key milestone scripts:
 - **Progressive Motivation**: Encouragement builds with difficulty
 - **Milestone Celebrations**: Special coaching for breakthrough moments
 - **Complete Coverage**: 27 workouts, 14 audio scripts, full calendar integration
+- **AI Voice Generation**: Professional-quality audio files with ElevenLabs
+- **Multiple Voice Options**: Choose your preferred coaching voice
+- **Cost-Effective**: Generate all audio files for less than $10
 
 ## 🛠️ Technical Details
 
 - **Calendar Format**: ICS (iCalendar) - compatible with Google Calendar, Outlook, Apple Calendar
 - **Time Zone**: All workouts scheduled for 7:00 AM CDT
 - **Audio Scripts**: Text format ready for text-to-speech conversion
+- **Audio Generation**: Python scripts using ElevenLabs API
 - **Total Duration**: Ranges from 28-40 minutes depending on week
 
-## 🎵 Audio Production Tips
+## 🎵 Audio Production
 
+### Automated Generation (Recommended)
+- Uses ElevenLabs AI for professional voice quality
+- Precise timing with millisecond accuracy
+- Multiple voice options (Rachel, Antoni, Bella, Josh)
+- Batch processing for all 14 audio files
+- Cost: ~$5 for all files
+
+### Manual Production Tips
 1. **Voice Selection**: Choose an encouraging, motivational voice
 2. **Background Music**: Add upbeat music for jogging, calmer for walking
 3. **Sound Effects**: Consider transition beeps between intervals
@@ -104,6 +148,7 @@ Key milestone scripts:
 - **Rest**: Take rest days seriously for recovery
 - **Hydration**: Stay well-hydrated throughout the program
 - **Form**: Maintain good running posture and breathing
+- **Audio**: Use the generated audio files for perfect timing
 
 ## 🎉 Graduation
 
@@ -112,6 +157,25 @@ Upon completing Week 9, Day 3, you will have officially graduated from couch to 
 ## 📞 Program Source
 
 Based on the proven Couch to 5K plan from [c25k.com](https://c25k.com/c25k_plan/), adapted with modern calendar integration and comprehensive audio coaching.
+
+## 🔧 Repository Structure
+
+```
+couch-to-5k-program/
+├── README.md                           # This file
+├── AUDIO_SETUP_GUIDE.md               # Audio generation guide
+├── couch_to_5k_calendar.ics           # Calendar import file
+├── requirements.txt                    # Python dependencies
+├── config.json.template               # Configuration template
+├── generate_audio.py                  # Full audio generation engine
+├── generate_c25k_audio.py             # Easy-to-use audio generator
+└── C25K_Audio_Scripts/                # Audio coaching scripts
+    ├── README_Audio_Instructions.txt   # Usage instructions
+    ├── Week1_Audio_Script.txt         # Week 1 coaching
+    ├── Week2_Audio_Script.txt         # Week 2 coaching
+    ├── ...                            # Additional weeks
+    └── Week9_Day3_FINAL_Audio_Script.txt # Graduation!
+```
 
 ---
 
