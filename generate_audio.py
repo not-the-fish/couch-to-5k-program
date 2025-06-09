@@ -15,6 +15,10 @@ from elevenlabs.client import ElevenLabs
 from pydub import AudioSegment
 import argparse
 
+class QuotaExceededException(Exception):
+    """Raised when API quota is exceeded"""
+    pass
+
 class C25KAudioGenerator:
     def __init__(self, api_key: str, voice_id: str = "21m00Tcm4TlvDq8ikWAM"):
         """
@@ -27,6 +31,7 @@ class C25KAudioGenerator:
         self.api_key = api_key
         self.voice_id = voice_id
         self.client = ElevenLabs(api_key=api_key)
+        self.quota_exceeded = False
         
         # Create output directory
         self.output_dir = Path("generated_audio")
@@ -69,7 +74,13 @@ class C25KAudioGenerator:
             
         Returns:
             AudioSegment containing the generated speech
+            
+        Raises:
+            QuotaExceededException: When API quota is exceeded
         """
+        if self.quota_exceeded:
+            raise QuotaExceededException("API quota previously exceeded")
+            
         try:
             # Generate audio using ElevenLabs
             audio_generator = self.client.text_to_speech.convert(
@@ -94,8 +105,18 @@ class C25KAudioGenerator:
             return audio_segment
             
         except Exception as e:
-            print(f"Error generating speech for text: {text[:50]}...")
+            error_str = str(e)
+            print(f"❌ Error generating speech for text: {text[:50]}...")
             print(f"Error: {e}")
+            
+            # Check if this is a quota exceeded error
+            if "quota_exceeded" in error_str or "exceeds your quota" in error_str:
+                self.quota_exceeded = True
+                print("🚨 API quota exceeded! Stopping audio generation.")
+                raise QuotaExceededException(f"ElevenLabs API quota exceeded: {e}")
+            
+            # For other errors, return silence as fallback
+            print("⚠️  Using silence as fallback for this segment")
             return AudioSegment.silent(duration=1000)  # 1 second of silence as fallback
     
     def create_timed_audio(self, timestamps: List[Tuple[float, str]], total_duration: int) -> AudioSegment:
@@ -108,6 +129,9 @@ class C25KAudioGenerator:
             
         Returns:
             Complete AudioSegment with timed speech
+            
+        Raises:
+            QuotaExceededException: When API quota is exceeded
         """
         # Start with silence for the full duration
         final_audio = AudioSegment.silent(duration=total_duration * 1000)  # Convert to milliseconds
@@ -117,18 +141,23 @@ class C25KAudioGenerator:
         for i, (timestamp, text) in enumerate(timestamps):
             print(f"  Processing {i+1}/{len(timestamps)}: {timestamp}s - {text[:50]}...")
             
-            # Generate speech for this text
-            speech_audio = self.generate_speech_segment(text)
-            
-            # Calculate position in milliseconds
-            position_ms = int(timestamp * 1000)
-            
-            # Overlay the speech at the specified timestamp
-            if position_ms < len(final_audio):
-                final_audio = final_audio.overlay(speech_audio, position=position_ms)
-            
-            # Small delay to avoid rate limiting
-            time.sleep(0.5)
+            try:
+                # Generate speech for this text
+                speech_audio = self.generate_speech_segment(text)
+                
+                # Calculate position in milliseconds
+                position_ms = int(timestamp * 1000)
+                
+                # Overlay the speech at the specified timestamp
+                if position_ms < len(final_audio):
+                    final_audio = final_audio.overlay(speech_audio, position=position_ms)
+                
+                # Small delay to avoid rate limiting
+                time.sleep(0.5)
+                
+            except QuotaExceededException:
+                # Re-raise quota exceeded to stop processing
+                raise
         
         return final_audio
     
@@ -169,7 +198,7 @@ class C25KAudioGenerator:
             script_file: Path to the script file
             
         Returns:
-            Path to the generated audio file
+            Path to the generated audio file, or None if failed
         """
         print(f"\n=== Processing {script_file} ===")
         
@@ -187,19 +216,25 @@ class C25KAudioGenerator:
             content = file.read()
         duration = self.get_workout_duration(content)
         
-        # Generate the audio
-        audio = self.create_timed_audio(timestamps, duration)
-        
-        # Generate output filename
-        script_name = Path(script_file).stem
-        output_file = self.output_dir / f"{script_name}.mp3"
-        
-        # Export the audio
-        print(f"Exporting to {output_file}...")
-        audio.export(str(output_file), format="mp3", bitrate="128k")
-        
-        print(f"✅ Generated: {output_file}")
-        return str(output_file)
+        try:
+            # Generate the audio
+            audio = self.create_timed_audio(timestamps, duration)
+            
+            # Generate output filename
+            script_name = Path(script_file).stem
+            output_file = self.output_dir / f"{script_name}.mp3"
+            
+            # Export the audio
+            print(f"Exporting to {output_file}...")
+            audio.export(str(output_file), format="mp3", bitrate="128k")
+            
+            print(f"✅ Generated: {output_file}")
+            return str(output_file)
+            
+        except QuotaExceededException as e:
+            print(f"❌ Cannot generate {script_file}: {e}")
+            print("💡 Tip: Add more credits to your ElevenLabs account to continue")
+            return None
     
     def process_all_scripts(self, scripts_dir: str = "C25K_Audio_Scripts"):
         """
@@ -222,20 +257,49 @@ class C25KAudioGenerator:
         print(f"Found {len(script_files)} script files to process")
         
         generated_files = []
+        failed_files = []
         
         for script_file in script_files:
             try:
                 output_file = self.process_script_file(str(script_file))
                 if output_file:
                     generated_files.append(output_file)
+                else:
+                    failed_files.append(str(script_file))
+                    
+                # If quota exceeded, stop processing remaining files
+                if self.quota_exceeded:
+                    remaining_files = script_files[script_files.index(script_file) + 1:]
+                    if remaining_files:
+                        print(f"\n⚠️  Skipping {len(remaining_files)} remaining files due to quota exceeded:")
+                        for remaining_file in remaining_files:
+                            print(f"  - {remaining_file.name}")
+                            failed_files.append(str(remaining_file))
+                    break
+                    
             except Exception as e:
                 print(f"❌ Error processing {script_file}: {e}")
+                failed_files.append(str(script_file))
                 continue
         
-        print(f"\n🎉 Audio generation complete!")
-        print(f"Generated {len(generated_files)} audio files:")
-        for file in generated_files:
-            print(f"  - {file}")
+        # Final summary
+        print(f"\n🎉 Audio generation summary:")
+        print(f"✅ Successfully generated: {len(generated_files)} files")
+        
+        if generated_files:
+            print("Generated files:")
+            for file in generated_files:
+                print(f"  - {file}")
+        
+        if failed_files:
+            print(f"\n❌ Failed to generate: {len(failed_files)} files")
+            print("Failed files:")
+            for file in failed_files:
+                print(f"  - {Path(file).name}")
+                
+        if self.quota_exceeded:
+            print(f"\n💰 API quota exceeded during processing.")
+            print(f"💡 Add more credits to your ElevenLabs account to generate the remaining {len(failed_files)} files.")
         
         return generated_files
 

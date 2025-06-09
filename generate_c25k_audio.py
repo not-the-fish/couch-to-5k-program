@@ -11,7 +11,7 @@ from pathlib import Path
 
 # Try to import the main generator
 try:
-    from generate_audio import C25KAudioGenerator
+    from generate_audio import C25KAudioGenerator, QuotaExceededException
 except ImportError:
     print("❌ Error: Could not import generate_audio module")
     print("Make sure you're running this from the project directory")
@@ -62,10 +62,10 @@ def main():
     print(f"💾 Output directory: {config['audio_settings']['output_directory']}")
     
     # Ask user what to generate
-    print("\n🎯 What would you like to generate?")
-    print("1. All audio files (14 files, ~30-45 minutes)")
-    print("2. Just Week 1 (test single file)")
-    print("3. Specific week/script")
+    print("\n🎯 What would you like to do?")
+    print("1. Generate all audio files (14 files, ~30-45 minutes)")
+    print("2. Generate just Week 1 (test single file)")
+    print("3. Generate specific week/script")
     
     choice = input("\nEnter your choice (1-3): ").strip()
     
@@ -76,51 +76,73 @@ def main():
         print(f"❌ Error initializing generator: {e}")
         return
     
-    if choice == "1":
-        # Generate all files
-        print("\n🚀 Generating all audio files...")
-        print("⚠️  This will take 20-30 minutes and use ~1000-2000 ElevenLabs characters")
-        confirm = input("Continue? (y/N): ").strip().lower()
-        
-        if confirm == 'y':
-            generator.process_all_scripts()
-        else:
-            print("Cancelled.")
-    
-    elif choice == "2":
-        # Test with Week 1
-        print("\n🧪 Generating Week 1 audio file (test)...")
-        script_file = "C25K_Audio_Scripts/Week1_Audio_Script.txt"
-        
-        if Path(script_file).exists():
-            generator.process_script_file(script_file)
-        else:
-            print(f"❌ Script file not found: {script_file}")
-    
-    elif choice == "3":
-        # Specific file
-        print("\n📋 Available scripts:")
-        scripts_dir = Path("C25K_Audio_Scripts")
-        script_files = []
-        
-        for i, file in enumerate(sorted(scripts_dir.glob("*.txt")), 1):
-            if not file.name.startswith("README"):
-                script_files.append(file)
-                print(f"  {i}. {file.name}")
-        
-        try:
-            file_choice = int(input(f"\nEnter file number (1-{len(script_files)}): ")) - 1
-            if 0 <= file_choice < len(script_files):
-                selected_file = script_files[file_choice]
-                print(f"\n🎵 Generating: {selected_file.name}")
-                generator.process_script_file(str(selected_file))
+    try:
+        if choice == "1":
+            # Generate all files
+            print("\n🚀 Generating all audio files...")
+            print("⚠️  This will take 20-30 minutes and use ~1000-2000 ElevenLabs characters")
+            confirm = input("Continue? (y/N): ").strip().lower()
+            
+            if confirm == 'y':
+                generated_files = generator.process_all_scripts()
+                if generator.quota_exceeded:
+                    print("\n⚠️  Generation stopped due to API quota exceeded.")
+                    print(f"✅ Successfully generated {len(generated_files)} files before running out of credits.")
+                else:
+                    print("\n🎉 All files generated successfully!")
             else:
-                print("❌ Invalid file number")
-        except ValueError:
-            print("❌ Please enter a valid number")
-    
-    else:
-        print("❌ Invalid choice")
+                print("Cancelled.")
+        
+        elif choice == "2":
+            # Test with Week 1
+            print("\n🧪 Generating Week 1 audio file (test)...")
+            script_file = "C25K_Audio_Scripts/Week1_Audio_Script.txt"
+            
+            if Path(script_file).exists():
+                result = generator.process_script_file(script_file)
+                if result:
+                    print(f"\n✅ Test successful! Generated: {result}")
+                else:
+                    print("\n❌ Test failed!")
+            else:
+                print(f"❌ Script file not found: {script_file}")
+        
+        elif choice == "3":
+            # Specific file
+            print("\n📋 Available scripts:")
+            scripts_dir = Path("C25K_Audio_Scripts")
+            script_files = []
+            
+            for i, file in enumerate(sorted(scripts_dir.glob("*.txt")), 1):
+                if not file.name.startswith("README"):
+                    script_files.append(file)
+                    print(f"  {i}. {file.name}")
+            
+            try:
+                file_choice = int(input(f"\nEnter file number (1-{len(script_files)}): ")) - 1
+                if 0 <= file_choice < len(script_files):
+                    selected_file = script_files[file_choice]
+                    print(f"\n🎵 Generating: {selected_file.name}")
+                    result = generator.process_script_file(str(selected_file))
+                    if result:
+                        print(f"\n✅ Generated: {result}")
+                    else:
+                        print(f"\n❌ Failed to generate {selected_file.name}")
+                else:
+                    print("❌ Invalid file number")
+            except ValueError:
+                print("❌ Please enter a valid number")
+        
+        else:
+            print("❌ Invalid choice")
+            
+    except QuotaExceededException as e:
+        print(f"\n💰 API quota exceeded: {e}")
+        print("💡 Add more credits to your ElevenLabs account to continue generating audio files.")
+    except KeyboardInterrupt:
+        print("\n\n⚠️  Generation cancelled by user.")
+    except Exception as e:
+        print(f"\n❌ Unexpected error: {e}")
 
 if __name__ == "__main__":
     main() 

@@ -50,6 +50,7 @@ Features:
 - **ElevenLabs AI Integration**: Professional voice generation
 - **Precise Timing**: Voice cues at exact workout moments
 - **Multiple Voices**: Choose from various motivational voices
+- **Smart Error Handling**: Graceful quota management and recovery
 - **Cost Effective**: Generate all files for ~$5/month
 - **Customizable**: Edit scripts for personal touches
 
@@ -149,6 +150,27 @@ python generate_c25k_audio.py
 - **Hydration**: Stay well-hydrated throughout the program
 - **Form**: Maintain good running posture and breathing
 - **Audio**: Use the generated audio files for perfect timing
+
+## 🛠️ Troubleshooting
+
+### Audio Generation Issues
+
+**API Quota Exceeded**
+- The script will stop gracefully when ElevenLabs credits run out
+- Successfully generated files are preserved
+- Add more credits to your account to continue
+- Re-run generation to continue from where it left off
+
+**Understanding Workout Audio Files**
+- Audio files are **mostly silent by design** (95%+ silence is normal)
+- Voice cues occur only at specific workout moments (e.g., "start jogging", "switch to walking")
+- A 30-minute file may contain only 2-3 minutes of actual speech
+- Long periods of silence are intentional for uninterrupted workouts
+
+**Cost Management**
+- Each full generation uses ~1000-2000 characters (~$1-2)
+- Test with Week 1 first to verify your setup
+- Generate files individually if needed to control costs
 
 ## 🎉 Graduation
 
