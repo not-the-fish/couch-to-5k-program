@@ -142,6 +142,60 @@ python generate_c25k_audio.py
 4. **Volume**: Keep music lower than voice instructions
 5. **Format**: Export as MP3 for universal compatibility
 
+### 📱 Getting Audio Files on Your Phone
+
+Once you've generated your audio files, you'll need to get them onto your phone for workouts. Here are several effective methods:
+
+### Cloud Storage (Recommended)
+**Google Drive / iCloud / Dropbox**
+1. Upload generated audio files to your preferred cloud service
+2. Download the cloud app on your phone
+3. Download files for offline access before workouts
+4. Play directly from the cloud app or your phone's built-in music player
+
+**Benefits**: Automatic sync, works across devices, no cable needed
+
+### Music Streaming Services
+**Spotify (Premium)**
+1. Create a new playlist in Spotify Desktop app
+2. Add your local audio files to the playlist ("Local Files" feature)
+3. Download playlist to your phone for offline listening
+4. Perfect integration with your existing music setup
+
+**Apple Music / YouTube Music**
+- Similar local file upload features available
+- Check your service's "local files" or "upload" options
+
+### Direct Transfer Methods
+**USB Cable Transfer**
+1. Connect phone to computer via USB
+2. Copy audio files to phone's Music folder
+3. Files will appear in your default music app
+4. Works with iPhone (via iTunes/Finder) and Android
+
+**AirDrop (iPhone/Mac)**
+1. Select audio files on Mac
+2. Right-click → Share → AirDrop
+3. Send to your iPhone
+4. Files save to Files app, can move to Music
+
+### Workout-Optimized Options
+**Dedicated Workout Apps**
+- Upload to fitness apps that support custom audio
+- Some running apps allow importing coaching tracks
+
+**Voice Recorder Apps**
+- Import into voice memo/recorder apps
+- Often have better background playback during workouts
+- Less likely to shuffle or interrupt with notifications
+
+### Pro Tips for Phone Audio
+- **Download for Offline**: Always download files locally before workouts
+- **Airplane Mode**: Consider using airplane mode during runs to save battery and avoid interruptions
+- **Volume**: Test audio levels before your first workout
+- **Backup Storage**: Keep files in multiple locations in case of phone issues
+- **File Names**: Keep descriptive names (e.g., "C25K_Week1_Day1.mp3") for easy selection
+
 ## 📈 Success Tips
 
 - **Consistency**: Follow the Mon/Wed/Fri schedule religiously
