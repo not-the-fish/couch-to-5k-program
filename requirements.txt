@@ -1,3 +1,4 @@
 elevenlabs==1.2.2
 pydub==0.25.1
-requests==2.31.0 
+requests==2.31.0
+icalendar==5.0.11 

@@ -5,25 +5,38 @@ A comprehensive 9-week program to take you from couch to running 5K (30 minutes)
 ## 🏃‍♂️ Overview
 
 This repository contains everything you need for a complete Couch to 5K training program:
-- **Google Calendar Integration**: Importable ICS file with all 27 workouts scheduled
+- **Dynamic Calendar Generation**: Python script to create custom workout schedules
 - **Audio Coaching Scripts**: 14 detailed scripts for voice-guided workouts
 - **Audio Generation Tools**: Python scripts to create professional AI-powered audio files
 - **Progressive Training Plan**: Scientifically designed 9-week progression
 
 ## 📅 Program Schedule
 
-- **Start Date**: Monday, June 9, 2025
-- **Schedule**: Monday, Wednesday, Friday at 12:00 PM UTC
+- **Default Schedule**: Monday, Wednesday, Friday at 12:00 PM UTC
 - **Duration**: 9 weeks (27 total workouts)
-- **Graduation**: Friday, August 8, 2025
+- **Customizable**: Generate your own schedule with preferred workout days
 
 ## 📁 Repository Contents
 
-### `couch_to_5k_calendar.ics`
-Google Calendar-compatible file with all 27 workouts scheduled. Import this file to get:
-- Precise workout scheduling (Mon/Wed/Fri at 12:00 PM UTC)
-- Complete workout descriptions for each day
-- Milestone celebrations and graduation ceremony
+### `generate_calendar.py`
+Python script to generate custom workout schedules:
+- Choose your start date
+- Select your preferred workout days
+- Set your workout time and timezone
+- Generates ICS file compatible with all major calendar apps
+- Includes complete workout descriptions and milestones
+
+Usage:
+```bash
+python generate_calendar.py --start-date 2025-06-09 --workout-days "Monday,Wednesday,Friday" --workout-time "7:00 am CDT"
+```
+
+Supported timezones:
+- EST/EDT (Eastern)
+- CST/CDT (Central)
+- MST/MDT (Mountain)
+- PST/PDT (Pacific)
+- UTC/GMT
 
 ### `C25K_Audio_Scripts/`
 Complete audio coaching system with 14 scripts:
@@ -56,17 +69,23 @@ Features:
 
 ## 🚀 Getting Started
 
-### 1. Import Calendar
-1. Open Google Calendar
-2. Click "+" next to "Other calendars"
-3. Select "Import"
-4. Upload `couch_to_5k_calendar.ics`
-
-### 2. Generate Audio Files (NEW!)
+### 1. Generate Calendar
 ```bash
 # Install dependencies
 pip install -r requirements.txt
 
+# Generate calendar with your preferred schedule
+python generate_calendar.py --start-date 2025-06-09 --workout-days "Monday,Wednesday,Friday" --workout-time "7:00 am CDT"
+```
+
+### 2. Import Calendar
+1. Open Google Calendar
+2. Click "+" next to "Other calendars"
+3. Select "Import"
+4. Upload the generated ICS file
+
+### 3. Generate Audio Files
+```bash
 # Configure API key
 cp config.json.template config.json
 # Edit config.json with your ElevenLabs API key
@@ -77,15 +96,9 @@ python generate_c25k_audio.py
 
 **📖 See `AUDIO_SETUP_GUIDE.md` for detailed instructions**
 
-### 3. Create Audio Files (Manual)
-1. Choose a text-to-speech service (ElevenLabs, Google TTS, etc.)
-2. Copy script text from the appropriate week's file
-3. Generate audio files with motivational voice
-4. Use during workouts for guided coaching
-
 ### 4. Start Training!
-- Begin with Week 1 on Monday, June 9, 2025
-- Follow the calendar schedule: Monday, Wednesday, Friday
+- Begin with Week 1 on your chosen start date
+- Follow your custom calendar schedule
 - Use audio coaching for perfect timing and motivation
 
 ## 📊 Program Progression
@@ -240,7 +253,7 @@ Based on the proven Couch to 5K plan from [c25k.com](https://c25k.com/c25k_plan/
 couch-to-5k-program/
 ├── README.md                           # This file
 ├── AUDIO_SETUP_GUIDE.md               # Audio generation guide
-├── couch_to_5k_calendar.ics           # Calendar import file
+├── generate_calendar.py                # Calendar generation script
 ├── requirements.txt                    # Python dependencies
 ├── config.json.template               # Configuration template
 ├── generate_audio.py                  # Full audio generation engine
