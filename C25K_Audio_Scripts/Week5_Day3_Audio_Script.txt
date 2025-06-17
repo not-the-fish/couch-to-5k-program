@@ -9,7 +9,7 @@ Total Duration: 30 minutes (5 min warmup + 20 min continuous jog + 5 min cooldow
 
 4:30 - "Almost ready to begin your historic 20-minute jog. Remember to pace yourself - this is about endurance, not speed."
 
-5:00 - "This is it! Your first 20-minute continuous jog starts NOW! Begin jogging and find your comfortable pace. You are stronger than you know!"
+5:00 - "BEGIN jogging now! This is your first 20-minute continuous jog! Find your comfortable pace. You are stronger than you know!"
 
 7:00 - "Two minutes down! You're doing great. Keep your breathing steady and your pace comfortable."
 
@@ -31,11 +31,13 @@ Total Duration: 30 minutes (5 min warmup + 20 min continuous jog + 5 min cooldow
 
 24:00 - "Final minute! You're about to complete your first 20-minute continuous jog! You are amazing!"
 
-25:00 - "YOU DID IT! You just jogged for 20 minutes straight! This is a HUGE milestone! Now slow down to a walking pace for your well-deserved cooldown."
+25:00 - "BEGIN walking now! YOU DID IT! You just jogged for 20 minutes straight! This is a HUGE milestone! Now slow down to a walking pace for your well-deserved cooldown."
 
 27:30 - "Halfway through your cooldown walk. Take a moment to appreciate what you just accomplished. You are now officially a jogger!"
 
 30:00 - "Workout complete! You've just achieved something incredible - your first 20-minute continuous jog! You should feel incredibly proud. You've proven to yourself that you can do anything you set your mind to!"
+
+30:05 - "Your cooldown is now complete. Great job today!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - This is a MAJOR milestone - make it feel special and celebratory

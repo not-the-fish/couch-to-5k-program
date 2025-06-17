@@ -7,17 +7,21 @@ Total Duration: 34 minutes (5 min warmup + 24 min intervals + 5 min cooldown)
 
 2:30 - "Halfway through your warm-up. After completing 20 minutes last week, today's intervals will feel manageable!"
 
-5:00 - "Warm-up complete! Let's start with a comfortable 5-minute jog. You've got this! BEGIN jogging now!"
+5:00 - "BEGIN jogging now! Let's start with a comfortable 5-minute jog. You've got this!"
 
-10:00 - "Great start! Walk for 3 minutes and prepare for your 8-minute jog - the longest interval today."
+10:00 - "BEGIN walking now! Great start! Walk for 3 minutes and prepare for your 8-minute jog - the longest interval today."
 
-13:00 - "Ready for 8 minutes of jogging! You've done this before. Find your comfortable pace and BEGIN jogging now!"
+13:00 - "BEGIN jogging now! This is your 8-minute jog! You've done this before. Find your comfortable pace!"
 
-21:00 - "Excellent! 8 minutes complete! Walk for 3 minutes. Just one more 5-minute jog to finish strong!"
+21:00 - "BEGIN walking now! Excellent! 8 minutes complete! Walk for 3 minutes. Just one more 5-minute jog to finish strong!"
 
-24:00 - "Final 5-minute jog of the day! You know you can handle this easily! BEGIN jogging now!"
+24:00 - "BEGIN jogging now! This is your final 5-minute jog of the day! You know you can handle this easily!"
 
-29:00 - "Outstanding! You just completed 18 minutes of total jogging in intervals! Cool down time."
+29:00 - "BEGIN walking now! Outstanding! You just completed 18 minutes of total jogging in intervals! Cool down time."
+
+30:00 - "Workout complete! You've successfully finished Week 6, Day 1 of Couch to 5K. You're building amazing endurance! Remember to stretch and stay hydrated. See you for Day 2!"
+
+30:05 - "Your cooldown is now complete. Great job today!"
 
 31:30 - "Halfway through your cooldown. You're building back up after your 20-minute breakthrough. Wednesday will be even better!"
 

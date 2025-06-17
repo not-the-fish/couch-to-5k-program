@@ -7,19 +7,23 @@ Total Duration: 34 minutes (5 min warmup + 24 min intervals + 5 min cooldown)
 
 2:30 - "Halfway through your warm-up. Three 5-minute jogs today - you've already proven you can handle 5 minutes!"
 
-5:00 - "Warm-up complete! Let's start with your first 5-minute jog. You've got this! BEGIN jogging now!"
+5:00 - "BEGIN jogging now! Let's start with your first 5-minute jog. You've got this!"
 
-10:00 - "Fantastic! First 5-minute jog complete! Walk for 3 minutes and get ready for round two."
+10:00 - "BEGIN walking now! Fantastic! First 5-minute jog complete! Walk for 3 minutes and get ready for round two."
 
-13:00 - "Ready for your second 5-minute jog! You're building incredible endurance. BEGIN jogging now!"
+13:00 - "BEGIN jogging now! This is your second 5-minute jog! You're building incredible endurance."
 
-18:00 - "Excellent! Two down, one to go! Walk for 3 minutes. You're doing something amazing today!"
+18:00 - "BEGIN walking now! Excellent! Two down, one to go! Walk for 3 minutes. You're doing something amazing today!"
 
-21:00 - "Final 5-minute jog of the day! Show yourself what you're capable of! BEGIN jogging now!"
+21:00 - "BEGIN jogging now! This is your final 5-minute jog of the day! Show yourself what you're capable of!"
 
-26:00 - "OUTSTANDING! You just completed three 5-minute jogs! That's 15 minutes of total jogging! Cool down time."
+26:00 - "BEGIN walking now! OUTSTANDING! You just completed three 5-minute jogs! That's 15 minutes of total jogging! Cool down time."
 
 28:30 - "Halfway through your cooldown. You just jogged for 15 minutes total - that's incredible progress!"
+
+30:00 - "Workout complete! You've successfully finished Week 5, Day 1 of Couch to 5K. You're really building your endurance! Remember to stretch and stay hydrated. See you for Day 2!"
+
+30:05 - "Your cooldown is now complete. Great job today!"
 
 34:00 - "Workout complete! Week 5, Day 1 conquered! You're building the endurance you'll need for Friday's 20-minute milestone. Amazing work!"
 

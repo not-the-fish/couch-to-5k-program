@@ -7,27 +7,29 @@ Total Duration: 28 minutes (5 min warmup + 18 min intervals + 5 min cooldown)
 
 2:30 - "Halfway through your warm-up. Today's workout will challenge you with longer jogging intervals. You're ready for this!"
 
-5:00 - "Warm-up complete! Here's the pattern: First we'll jog 90 seconds, walk 90 seconds, then jog 3 minutes, walk 3 minutes. We'll do this twice. Ready for your first 90-second jog... BEGIN jogging now!"
+5:00 - "BEGIN jogging now! Here's the pattern: First we'll jog 90 seconds, walk 90 seconds, then jog 3 minutes, walk 3 minutes. We'll do this twice. This is your first 90-second jog!"
 
-6:30 - "Great job! Now walk for 90 seconds and prepare for your first 3-minute jog interval."
+6:30 - "BEGIN walking now! Great job! Now walk for 90 seconds and prepare for your first 3-minute jog interval."
 
-8:00 - "Ready for 3 minutes of jogging! This is your longest interval yet. Pace yourself and BEGIN jogging now!"
+8:00 - "BEGIN jogging now! This is your first 3-minute jog - your longest interval yet! Pace yourself!"
 
-11:00 - "Excellent! You just completed 3 minutes of jogging! Now walk for 3 minutes and recover well."
+11:00 - "BEGIN walking now! Excellent! You just completed 3 minutes of jogging! Now walk for 3 minutes and recover well."
 
-14:00 - "That's the first cycle complete! Now we repeat the pattern. Ready for your second 90-second jog... BEGIN jogging now!"
+14:00 - "BEGIN jogging now! That's the first cycle complete! Now we repeat the pattern. This is your second 90-second jog!"
 
-15:30 - "Perfect! Walk for 90 seconds. You're doing amazingly well with these longer intervals!"
+15:30 - "BEGIN walking now! Perfect! Walk for 90 seconds. You're doing amazingly well with these longer intervals!"
 
-17:00 - "Here comes your final 3-minute jog of the day! You've got this! BEGIN jogging now!"
+17:00 - "BEGIN jogging now! Here comes your final 3-minute jog of the day! You've got this!"
 
-20:00 - "Outstanding! You've completed both cycles! Walk for 3 minutes and feel proud of conquering Week 3's challenge."
+20:00 - "BEGIN walking now! Outstanding! You've completed both cycles! Walk for 3 minutes and feel proud of conquering Week 3's challenge."
 
-23:00 - "Incredible work! Now let's cool down with a 5-minute walk. You just handled some serious interval training!"
+23:00 - "BEGIN walking now! Incredible work! Now let's cool down with a 5-minute walk. You just handled some serious interval training!"
 
 25:30 - "Halfway through your cooldown. You've successfully completed the Week 3 pattern - those 3-minute intervals are building your endurance!"
 
-28:00 - "Workout complete! Week 3 conquered! You just handled 90-second and 3-minute jogging intervals like a champion. Your fitness is really building now!"
+28:00 - "Workout complete! You've successfully finished Week 3 of Couch to 5K. You're really hitting your stride now! Remember to stretch and stay hydrated. Keep up the fantastic work!"
+
+28:05 - "Your cooldown is now complete. Great job today!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - Emphasize the new, more complex interval pattern

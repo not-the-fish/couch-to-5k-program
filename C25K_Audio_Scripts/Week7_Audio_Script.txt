@@ -7,7 +7,7 @@ Total Duration: 35 minutes (5 min warmup + 25 min continuous jog + 5 min cooldow
 
 2:30 - "Halfway through your warm-up. This week is about building confidence in longer runs. You've got this!"
 
-5:00 - "Warm-up complete! Time for 25 minutes of continuous jogging. You know you can do this - you proved it last week! BEGIN jogging now!"
+5:00 - "BEGIN jogging now! Time for 25 minutes of continuous jogging. You know you can do this - you proved it last week!"
 
 10:00 - "Five minutes down! You're finding your rhythm. This is becoming natural for you!"
 
@@ -23,11 +23,13 @@ Total Duration: 35 minutes (5 min warmup + 25 min continuous jog + 5 min cooldow
 
 29:00 - "Twenty-four minutes! One more minute! You're about to complete another 25-minute run!"
 
-30:00 - "TWENTY-FIVE MINUTES COMPLETE! Excellent work! You're consistently running for 25 minutes now! Cool down time."
+30:00 - "BEGIN walking now! TWENTY-FIVE MINUTES COMPLETE! Excellent work! You're consistently running for 25 minutes now! Cool down time."
 
 32:30 - "Halfway through your cooldown. Week 7 is all about proving you can consistently run for 25 minutes. You're doing it!"
 
-35:00 - "Workout complete! Another successful 25-minute run! You're building incredible endurance and consistency. Keep this up!"
+35:00 - "Workout complete! You've successfully finished Week 7 of Couch to 5K. You're now running for 25 minutes continuously! You're so close to graduation! Remember to stretch and stay hydrated. Amazing work!"
+
+35:05 - "Your cooldown is now complete. Great job today!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - Emphasize consistency and building confidence

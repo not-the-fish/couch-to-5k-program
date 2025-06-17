@@ -7,7 +7,7 @@ Total Duration: 40 minutes (5 min warmup + 30 min continuous jog + 5 min cooldow
 
 2:30 - "Halfway through your warm-up. 30 minutes of continuous jogging awaits! You are SO ready for this!"
 
-5:00 - "Warm-up complete! Here we go - 30 minutes of continuous jogging! This is what you've been training for all these weeks! BEGIN jogging now!"
+5:00 - "BEGIN jogging now! Here we go - 30 minutes of continuous jogging! This is what you've been training for all these weeks!"
 
 10:00 - "Five minutes down! You're settling into your graduation pace beautifully!"
 
@@ -27,9 +27,13 @@ Total Duration: 40 minutes (5 min warmup + 30 min continuous jog + 5 min cooldow
 
 34:00 - "Twenty-nine minutes! One more minute! You're seconds away from C25K success!"
 
-35:00 - "THIRTY MINUTES! YOU DID IT! You just completed the full Couch to 5K distance! This is AMAZING! You're officially ready to graduate! Cool down and celebrate!"
+35:00 - "BEGIN walking now! THIRTY MINUTES! YOU DID IT! You just completed the full Couch to 5K distance! This is AMAZING! You're officially ready to graduate! Cool down and celebrate!"
 
 37:30 - "Halfway through your cooldown. You just completed 30 minutes of continuous jogging! You are now a runner!"
+
+38:00 - "Workout complete! You've successfully finished another Week 9 workout! You're in graduation week and doing amazing! Remember to stretch and stay hydrated. See you for the final workout!"
+
+38:05 - "Your cooldown is now complete. Great job today!"
 
 40:00 - "Workout complete! You've just proven you can complete the full C25K program! Friday's graduation is going to be a celebration of everything you've achieved!"
 

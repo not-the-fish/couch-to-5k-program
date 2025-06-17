@@ -7,7 +7,7 @@ Total Duration: 35 minutes (5 min warmup + 25 min continuous jog + 5 min cooldow
 
 2:30 - "Halfway through your warm-up. 25 minutes of continuous jogging awaits! You are absolutely ready for this challenge."
 
-5:00 - "Here we go! Your first 25-minute continuous jog starts NOW! Find your comfortable, sustainable pace and BEGIN jogging!"
+5:00 - "BEGIN jogging now! This is your first 25-minute continuous jog! Find your comfortable, sustainable pace!"
 
 10:00 - "Five minutes down! You're settling into your rhythm beautifully. 20 minutes to go!"
 
@@ -25,9 +25,13 @@ Total Duration: 35 minutes (5 min warmup + 25 min continuous jog + 5 min cooldow
 
 29:00 - "Twenty-four minutes! One more minute! You're about to complete 25 minutes of continuous jogging!"
 
-30:00 - "TWENTY-FIVE MINUTES! YOU DID IT! You just completed your longest continuous jog ever! This is HUGE! Slow down to your cooldown walk and celebrate!"
+30:00 - "BEGIN walking now! TWENTY-FIVE MINUTES! YOU DID IT! You just completed your longest continuous jog ever! This is HUGE! Slow down to your cooldown walk and celebrate!"
 
 32:30 - "Halfway through your cooldown. You are now officially capable of running for 25 minutes straight! That's incredible progress!"
+
+33:00 - "Workout complete! You've just achieved another incredible milestone - your first 25-minute continuous jog! You're getting so close to graduation! You should feel amazing about what you just accomplished!"
+
+33:05 - "Your cooldown is now complete. Great job today!"
 
 35:00 - "Workout complete! You've just achieved another major milestone - 25 minutes of continuous jogging! You're so close to graduation now!"
 

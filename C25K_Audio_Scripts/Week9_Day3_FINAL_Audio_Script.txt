@@ -7,7 +7,7 @@ Total Duration: 40 minutes (5 min warmup + 30 min continuous jog + 5 min cooldow
 
 2:30 - "This is your last warm-up as a C25K participant. In just 35 minutes, you'll be a C25K GRADUATE! Feel the excitement and pride building."
 
-5:00 - "Here we go! Your FINAL and longest jog - 30 minutes straight! You've trained for this moment for 9 weeks. You are ready, you are strong, you are a RUNNER! Begin your victory lap NOW!"
+5:00 - "BEGIN jogging now! This is your FINAL and longest jog - 30 minutes straight! You've trained for this moment for 9 weeks. You are ready, you are strong, you are a RUNNER!"
 
 8:00 - "Three minutes down! You're settling into your rhythm. This is your victory jog - savor every step!"
 
@@ -31,11 +31,13 @@ Total Duration: 40 minutes (5 min warmup + 30 min continuous jog + 5 min cooldow
 
 34:00 - "Twenty-nine minutes! One more minute! You're about to join the ranks of C25K graduates!"
 
-35:00 - "THIRTY MINUTES! YOU DID IT! YOU ARE NOW A COUCH TO 5K GRADUATE! 🎉 You have just completed your transformation from couch to 5K runner! This is AMAZING! Slow down to your cooldown walk and celebrate this incredible achievement!"
+35:00 - "BEGIN walking now! THIRTY MINUTES! YOU DID IT! YOU ARE NOW A COUCH TO 5K GRADUATE! 🎉 You have just completed your transformation from couch to 5K runner! This is AMAZING! Slow down to your cooldown walk and celebrate this incredible achievement!"
 
 37:30 - "Halfway through your graduation cooldown. You are no longer a beginner - you are a RUNNER! Take this time to reflect on your incredible 9-week journey."
 
 40:00 - "CONGRATULATIONS! You have officially GRADUATED from Couch to 5K! You started 9 weeks ago and couldn't run for more than a minute. Today you just ran for 30 minutes straight! You have transformed yourself and proven that with dedication and consistency, you can achieve anything. Welcome to your new life as a runner! This is not the end - it's just the beginning!"
+
+40:05 - "Your cooldown is now complete. Congratulations, graduate!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - This should be the most celebratory and emotional script

@@ -7,13 +7,15 @@ Total Duration: 31 minutes (5 min warmup + 21 min intervals + 5 min cooldown)
 
 2:30 - "Halfway through your warm-up. Two 8-minute jogs today - longer than you've ever done, but you're ready!"
 
-5:00 - "Warm-up complete! Time for your first 8-minute jog. This is a big step up, but you've been training for this. Find your rhythm and BEGIN jogging now!"
+5:00 - "BEGIN jogging now! Time for your first 8-minute jog. This is a big step up, but you've been training for this. Find your rhythm!"
 
-13:00 - "AMAZING! You just jogged for 8 minutes straight! You're becoming a real runner! Walk for 5 minutes and prepare for your final 8-minute jog."
+13:00 - "BEGIN walking now! AMAZING! You just jogged for 8 minutes straight! You're becoming a real runner! Walk for 5 minutes and prepare for your final 8-minute jog."
 
-18:00 - "Recovery complete! One more 8-minute jog and you'll have proven you're ready for Friday's 20-minute challenge! BEGIN jogging now!"
+18:00 - "BEGIN jogging now! Recovery complete! This is your final 8-minute jog and you'll have proven you're ready for Friday's 20-minute challenge!"
 
-26:00 - "INCREDIBLE! You just completed two 8-minute jogs! That's 16 minutes of total jogging! You are absolutely ready for 20 minutes on Friday! Cool down time."
+26:00 - "BEGIN walking now! Workout complete! You've successfully finished Week 5, Day 2 of Couch to 5K. You're getting ready for something big on Day 3! Remember to stretch and stay hydrated. Rest up - you'll need your energy!"
+
+26:05 - "Your cooldown is now complete. Great job today!"
 
 28:30 - "Halfway through your cooldown. You just jogged for 16 minutes total in two segments. Friday's 20-minute continuous jog is going to be amazing!"
 

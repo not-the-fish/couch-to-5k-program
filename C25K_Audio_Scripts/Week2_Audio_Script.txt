@@ -7,35 +7,37 @@ Total Duration: 31 minutes (5 min warmup + 21 min intervals + 5 min cooldown)
 
 2:30 - "Halfway through your warm-up. You should feel your body warming up and ready for today's challenge."
 
-5:00 - "Warm-up complete! Today you'll jog for 90 seconds, then walk for 2 minutes. We'll repeat this pattern for 21 minutes. Ready for your first 90-second jog... BEGIN jogging now!"
+5:00 - "BEGIN jogging now! Today you'll jog for 90 seconds, then walk for 2 minutes. This is your first 90-second jog!"
 
-6:30 - "Excellent! You've completed 90 seconds of jogging! Now walk for 2 minutes and recover."
+6:30 - "BEGIN walking now! Excellent! You've completed 90 seconds of jogging! Now walk for 2 minutes and recover."
 
-8:30 - "Second jogging interval! You can do this! Jog for 90 seconds... BEGIN jogging now!"
+8:30 - "BEGIN jogging now! This is your second jogging interval! You can do this!"
 
-10:00 - "Great work! Walking recovery for 2 minutes. Take deep breaths."
+10:00 - "BEGIN walking now! Great work! Walking recovery for 2 minutes. Take deep breaths."
 
-12:00 - "Third jog interval! Feel your strength building! Jog for 90 seconds... BEGIN jogging now!"
+12:00 - "BEGIN jogging now! This is your third jog interval! Feel your strength building!"
 
-13:30 - "Fantastic! Walking break for 2 minutes. You're getting stronger each week!"
+13:30 - "BEGIN walking now! Fantastic! Walking break for 2 minutes. You're getting stronger each week!"
 
-15:30 - "Fourth jogging interval! Halfway through your intervals! Jog for 90 seconds... BEGIN jogging now!"
+15:30 - "BEGIN jogging now! This is your fourth jogging interval! Halfway through your intervals!"
 
-17:00 - "Outstanding! Walking recovery for 2 minutes. Keep that momentum going."
+17:00 - "BEGIN walking now! Outstanding! Walking recovery for 2 minutes. Keep that momentum going."
 
-19:00 - "Fifth jog interval! You're doing amazingly well! Jog for 90 seconds... BEGIN jogging now!"
+19:00 - "BEGIN jogging now! This is your fifth jog interval! You're doing amazingly well!"
 
-20:30 - "Brilliant! Walking break for 2 minutes. Almost finished with intervals!"
+20:30 - "BEGIN walking now! Brilliant! Walking break for 2 minutes. Almost finished with intervals!"
 
-22:30 - "Sixth and final jogging interval! Give it everything you've got! Jog for 90 seconds... BEGIN jogging now!"
+22:30 - "BEGIN jogging now! This is your sixth and final jogging interval! Give it everything you've got!"
 
-24:00 - "Incredible! You've completed all your intervals for Week 2! Walking recovery for 2 minutes."
+24:00 - "BEGIN walking now! Incredible! You've completed all your intervals for Week 2! Walking recovery for 2 minutes."
 
-26:00 - "Perfect! Now let's cool down with a 5-minute walk. Slow your pace and let your heart rate come down."
+26:00 - "BEGIN walking now! Perfect! Now let's cool down with a 5-minute walk. Slow your pace and let your heart rate come down."
 
 28:30 - "Halfway through your cooldown. You've just completed another milestone in your C25K journey!"
 
-31:00 - "Workout complete! Week 2 done! You've increased your jogging time and you should feel proud. Keep up the great work!"
+31:00 - "Workout complete! You've successfully finished Week 2 of Couch to 5K. You're building excellent running habits! Remember to stretch and stay hydrated. See you next workout!"
+
+31:05 - "Your cooldown is now complete. Great job today!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - Emphasize the progression from Week 1
