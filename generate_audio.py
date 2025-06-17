@@ -133,10 +133,14 @@ class C25KAudioGenerator:
         Raises:
             QuotaExceededException: When API quota is exceeded
         """
-        # Start with silence for the full duration
-        final_audio = AudioSegment.silent(duration=total_duration * 1000)  # Convert to milliseconds
+        # Add 10 second buffer at the end to ensure final message is included
+        buffer_duration = 10  # seconds
+        final_duration = total_duration + buffer_duration
         
-        print(f"Creating audio with {len(timestamps)} speech segments over {total_duration} seconds...")
+        # Start with silence for the full duration plus buffer
+        final_audio = AudioSegment.silent(duration=final_duration * 1000)  # Convert to milliseconds
+        
+        print(f"Creating audio with {len(timestamps)} speech segments over {total_duration} seconds (plus {buffer_duration}s buffer)...")
         
         for i, (timestamp, text) in enumerate(timestamps):
             print(f"  Processing {i+1}/{len(timestamps)}: {timestamp}s - {text[:50]}...")
