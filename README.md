@@ -268,4 +268,4 @@ couch-to-5k-program/
 
 ---
 
-**Ready to transform your life? Your journey from couch to 5K starts Monday, June 9, 2025 at 12:00 PM UTC!** 🏃‍♂️✨ 
+**Ready to transform your life? Your journey from couch to 5K starts now!** 🏃‍♂️✨ 
