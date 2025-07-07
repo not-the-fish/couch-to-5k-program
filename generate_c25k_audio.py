@@ -66,8 +66,9 @@ def main():
     print("1. Generate all audio files (14 files, ~30-45 minutes)")
     print("2. Generate just Week 1 (test single file)")
     print("3. Generate specific week/script")
+    print("4. Check which files need to be generated (dry run)")
     
-    choice = input("\nEnter your choice (1-3): ").strip()
+    choice = input("\nEnter your choice (1-4): ").strip()
     
     # Initialize generator
     try:
@@ -81,6 +82,8 @@ def main():
             # Generate all files
             print("\n🚀 Generating all audio files...")
             print("⚠️  This will take 20-30 minutes and use ~1000-2000 ElevenLabs characters")
+            print("💡 Existing files will be skipped (use --force to regenerate)")
+            
             confirm = input("Continue? (y/N): ").strip().lower()
             
             if confirm == 'y':
@@ -132,6 +135,12 @@ def main():
                     print("❌ Invalid file number")
             except ValueError:
                 print("❌ Please enter a valid number")
+        
+        elif choice == "4":
+            # Dry run - check status
+            print("\n🔍 Checking audio file status...")
+            from generate_audio import check_audio_status
+            check_audio_status()
         
         else:
             print("❌ Invalid choice")

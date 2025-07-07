@@ -194,17 +194,29 @@ class C25KAudioGenerator:
         
         return 2400  # 40 minutes default
     
-    def process_script_file(self, script_file: str) -> str:
+    def process_script_file(self, script_file: str, force_regenerate: bool = False) -> str:
         """
         Process a single script file and generate audio
         
         Args:
             script_file: Path to the script file
+            force_regenerate: If True, regenerate even if file exists
             
         Returns:
             Path to the generated audio file, or None if failed
         """
         print(f"\n=== Processing {script_file} ===")
+        
+        # Generate output filename
+        script_name = Path(script_file).stem
+        output_file = self.output_dir / f"{script_name}.mp3"
+        
+        # Check if file already exists
+        if output_file.exists() and not force_regenerate:
+            size_mb = output_file.stat().st_size / (1024 * 1024)
+            print(f"⏭️  Skipping {script_name}.mp3 (already exists, {size_mb:.1f} MB)")
+            print("   Use --force to regenerate existing files")
+            return str(output_file)
         
         # Parse the script
         timestamps = self.parse_script_file(script_file)
@@ -224,10 +236,6 @@ class C25KAudioGenerator:
             # Generate the audio
             audio = self.create_timed_audio(timestamps, duration)
             
-            # Generate output filename
-            script_name = Path(script_file).stem
-            output_file = self.output_dir / f"{script_name}.mp3"
-            
             # Export the audio
             print(f"Exporting to {output_file}...")
             audio.export(str(output_file), format="mp3", bitrate="128k")
@@ -240,12 +248,13 @@ class C25KAudioGenerator:
             print("💡 Tip: Add more credits to your ElevenLabs account to continue")
             return None
     
-    def process_all_scripts(self, scripts_dir: str = "C25K_Audio_Scripts"):
+    def process_all_scripts(self, scripts_dir: str = "C25K_Audio_Scripts", force_regenerate: bool = False):
         """
         Process all script files in the directory
         
         Args:
             scripts_dir: Directory containing script files
+            force_regenerate: If True, regenerate even if files exist
         """
         scripts_dir = Path(scripts_dir)
         
@@ -261,13 +270,24 @@ class C25KAudioGenerator:
         print(f"Found {len(script_files)} script files to process")
         
         generated_files = []
+        skipped_files = []
         failed_files = []
         
         for script_file in script_files:
             try:
-                output_file = self.process_script_file(str(script_file))
+                output_file = self.process_script_file(str(script_file), force_regenerate)
                 if output_file:
-                    generated_files.append(output_file)
+                    # Check if this was a skip or actual generation
+                    script_name = Path(script_file).stem
+                    expected_output = self.output_dir / f"{script_name}.mp3"
+                    if expected_output.exists() and not force_regenerate:
+                        # Check if it was just created or already existed
+                        if expected_output.stat().st_mtime > time.time() - 60:  # Created in last minute
+                            generated_files.append(output_file)
+                        else:
+                            skipped_files.append(output_file)
+                    else:
+                        generated_files.append(output_file)
                 else:
                     failed_files.append(str(script_file))
                     
@@ -289,10 +309,16 @@ class C25KAudioGenerator:
         # Final summary
         print(f"\n🎉 Audio generation summary:")
         print(f"✅ Successfully generated: {len(generated_files)} files")
+        print(f"⏭️  Skipped (already exist): {len(skipped_files)} files")
         
         if generated_files:
             print("Generated files:")
             for file in generated_files:
+                print(f"  - {file}")
+        
+        if skipped_files:
+            print("Skipped files:")
+            for file in skipped_files:
                 print(f"  - {file}")
         
         if failed_files:
@@ -307,24 +333,119 @@ class C25KAudioGenerator:
         
         return generated_files
 
+def check_audio_status(scripts_dir: str = "C25K_Audio_Scripts"):
+    """
+    Check which audio files need to be generated (dry run)
+    
+    Args:
+        scripts_dir: Directory containing script files
+    """
+    scripts_dir = Path(scripts_dir)
+    audio_dir = Path("generated_audio")
+    
+    # Ensure directories exist
+    if not scripts_dir.exists():
+        print("❌ Scripts directory not found: C25K_Audio_Scripts")
+        return
+    
+    if not audio_dir.exists():
+        print("📁 Audio directory not found: generated_audio")
+        print("   (Will be created when you generate audio)")
+        audio_dir.mkdir(exist_ok=True)
+    
+    # Find all script files (excluding README)
+    script_files = []
+    for file in sorted(scripts_dir.glob("*.txt")):
+        if not file.name.startswith("README"):
+            script_files.append(file)
+    
+    if not script_files:
+        print("❌ No script files found in C25K_Audio_Scripts")
+        return
+    
+    print("🎵 Couch to 5K Audio Status Check")
+    print("=" * 40)
+    print(f"📁 Scripts directory: {scripts_dir}")
+    print(f"🎧 Audio directory: {audio_dir}")
+    print()
+    
+    # Check each script file
+    missing_files = []
+    existing_files = []
+    
+    for script_file in script_files:
+        # Expected audio filename
+        audio_filename = f"{script_file.stem}.mp3"
+        audio_path = audio_dir / audio_filename
+        
+        if audio_path.exists():
+            # Get file size for info
+            size_mb = audio_path.stat().st_size / (1024 * 1024)
+            existing_files.append((script_file.name, audio_filename, size_mb))
+        else:
+            missing_files.append(script_file.name)
+    
+    # Display results
+    print(f"📊 Status Summary:")
+    print(f"   Total script files: {len(script_files)}")
+    print(f"   ✅ Generated: {len(existing_files)}")
+    print(f"   ❌ Missing: {len(missing_files)}")
+    print()
+    
+    if existing_files:
+        print("✅ Generated Audio Files:")
+        for script_name, audio_name, size_mb in existing_files:
+            print(f"   📁 {script_name} → {audio_name} ({size_mb:.1f} MB)")
+        print()
+    
+    if missing_files:
+        print("❌ Missing Audio Files:")
+        for script_name in missing_files:
+            print(f"   📝 {script_name} → {script_name.replace('.txt', '.mp3')}")
+        print()
+        
+        print("🚀 To generate missing files, run:")
+        print("   python generate_audio.py --api-key YOUR_KEY")
+        print()
+        print("   Or generate a specific file:")
+        print("   python generate_audio.py --api-key YOUR_KEY --single-file C25K_Audio_Scripts/Week1_Audio_Script.txt")
+    else:
+        print("🎉 All audio files have been generated!")
+        print()
+        print("💡 To regenerate all files, run:")
+        print("   python generate_audio.py --api-key YOUR_KEY")
+
 def main():
     parser = argparse.ArgumentParser(description="Generate Couch to 5K audio files using ElevenLabs")
-    parser.add_argument("--api-key", required=True, help="ElevenLabs API key")
+    parser.add_argument("--api-key", help="ElevenLabs API key (not required for dry run)")
     parser.add_argument("--voice-id", default="21m00Tcm4TlvDq8ikWAM", help="ElevenLabs voice ID (default: Rachel)")
     parser.add_argument("--scripts-dir", default="C25K_Audio_Scripts", help="Directory containing script files")
     parser.add_argument("--single-file", help="Process only a single script file")
+    parser.add_argument("--dry-run", action="store_true", help="Check which audio files need to be generated without making any changes")
+    parser.add_argument("--force", action="store_true", help="Force regeneration of existing audio files")
     
     args = parser.parse_args()
+    
+    if args.dry_run:
+        # Dry run - just check status
+        check_audio_status(args.scripts_dir)
+        return
+    
+    # Regular generation requires API key
+    if not args.api_key:
+        print("❌ API key is required for audio generation")
+        print("💡 Use --dry-run to check status without API key")
+        return
     
     # Initialize the generator
     generator = C25KAudioGenerator(args.api_key, args.voice_id)
     
     if args.single_file:
         # Process single file
-        generator.process_script_file(args.single_file)
+        generator.process_script_file(args.single_file, args.force)
     else:
         # Process all files
-        generator.process_all_scripts(args.scripts_dir)
+        generator.process_all_scripts(args.scripts_dir, args.force)
 
 if __name__ == "__main__":
     main() 

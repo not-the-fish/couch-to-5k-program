@@ -53,7 +53,7 @@ Key milestone scripts:
 ### 🎵 Audio Generation System
 **NEW**: Automatically convert text scripts to professional audio files!
 
-- **`generate_audio.py`** - Full-featured audio generation engine
+- **`generate_audio.py`** - Full-featured audio generation engine with CLI
 - **`generate_c25k_audio.py`** - Easy-to-use interactive script
 - **`requirements.txt`** - Python dependencies
 - **`config.json.template`** - Configuration template
@@ -64,6 +64,8 @@ Features:
 - **Precise Timing**: Voice cues at exact workout moments
 - **Multiple Voices**: Choose from various motivational voices
 - **Smart Error Handling**: Graceful quota management and recovery
+- **Resume Functionality**: Skip existing files to save time and API credits
+- **Dry Run Mode**: Check which files need generation without using API
 - **Cost Effective**: Generate all files for ~$5/month
 - **Customizable**: Edit scripts for personal touches
 
@@ -90,8 +92,17 @@ python generate_calendar.py --start-date 2025-06-09 --workout-days "Monday,Wedne
 cp config.json.template config.json
 # Edit config.json with your ElevenLabs API key
 
-# Generate audio files
+# Check which files need generation (dry run)
+python generate_audio.py --dry-run
+
+# Generate audio files (skips existing files)
 python generate_c25k_audio.py
+
+# Or use CLI for more control
+python generate_audio.py --api-key YOUR_KEY
+
+# Force regenerate all files
+python generate_audio.py --api-key YOUR_KEY --force
 ```
 
 **📖 See `AUDIO_SETUP_GUIDE.md` for detailed instructions**
@@ -129,6 +140,8 @@ python generate_c25k_audio.py
 - **Complete Coverage**: 27 workouts, 14 audio scripts, full calendar integration
 - **AI Voice Generation**: Professional-quality audio files with ElevenLabs
 - **Multiple Voice Options**: Choose your preferred coaching voice
+- **Smart Resume**: Skip existing files to save time and API credits
+- **Dry Run Mode**: Preview generation without using API
 - **Cost-Effective**: Generate all audio files for less than $10
 
 ## 🛠️ Technical Details
@@ -226,7 +239,12 @@ Once you've generated your audio files, you'll need to get them onto your phone 
 - The script will stop gracefully when ElevenLabs credits run out
 - Successfully generated files are preserved
 - Add more credits to your account to continue
-- Re-run generation to continue from where it left off
+- Re-run generation to continue from where it left off (resume functionality)
+
+**Resume Functionality**
+- By default, the script skips existing audio files to save time and API credits
+- Use `--force` flag to regenerate all files from scratch
+- Use `--dry-run` to check which files need generation without using API
 
 **Understanding Workout Audio Files**
 - Audio files are **mostly silent by design** (95%+ silence is normal)
@@ -238,6 +256,7 @@ Once you've generated your audio files, you'll need to get them onto your phone 
 - Each full generation uses ~1000-2000 characters (~$1-2)
 - Test with Week 1 first to verify your setup
 - Generate files individually if needed to control costs
+- Use dry run mode to plan your generation strategy
 
 ## 🎉 Graduation
 
