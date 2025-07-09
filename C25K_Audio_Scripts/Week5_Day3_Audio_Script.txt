@@ -15,19 +15,19 @@ Total Duration: 30 minutes (5 min warmup + 20 min continuous jog + 5 min cooldow
 
 10:00 - "You're 5 minutes in - that's a quarter of the way! Your body is finding its rhythm. Stay strong!"
 
-12:30 - "Halfway point! 10 minutes down, 10 minutes to go! You're doing something amazing right now!"
+12:30 - "7 and a half minutes in. You're doing something amazing right now!"
 
 15:00 - "You're at the 10-minute mark! This is incredible progress. Keep pushing forward - you've got this!"
 
 17:00 - "12 minutes completed! You're in the final stretch now. Your body is capable of amazing things!"
 
-18:00 - "Only 5 minutes left! You're almost there! This is where champions are made!"
+18:00 - "Only 7 minutes left! You're almost there! This is where champions are made!"
 
-19:00 - "Final 4 minutes! You can see the finish line! Keep going - you're about to achieve something incredible!"
+19:00 - "Final 6 minutes! You can see the finish line! Keep going - you're about to achieve something incredible!"
 
-20:00 - "3 minutes left! You're so close to making history in your fitness journey!"
+20:00 - "5 minutes left! You're so close to making history in your fitness journey!"
 
-22:00 - "2 more minutes! You're unstoppable! Feel the strength you've built over these weeks!"
+22:00 - "3 more minutes! You're unstoppable! Feel the strength you've built over these weeks!"
 
 24:00 - "Final minute! You're about to complete your first 20-minute continuous jog! You are amazing!"
 
@@ -37,7 +37,7 @@ Total Duration: 30 minutes (5 min warmup + 20 min continuous jog + 5 min cooldow
 
 30:00 - "Workout complete! You've just achieved something incredible - your first 20-minute continuous jog! You should feel incredibly proud. You've proven to yourself that you can do anything you set your mind to!"
 
-30:05 - "Your cooldown is now complete. Great job today!"
+35:00 - "Your cooldown is now complete. Great job today!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - This is a MAJOR milestone - make it feel special and celebratory
