@@ -23,7 +23,7 @@ Total Duration: 34 minutes (5 min warmup + 24 min intervals + 5 min cooldown)
 
 30:05 - "Your cooldown is now complete. Great job today!"
 
-31:30 - "Halfway through your cooldown. You're building back up after your 20-minute breakthrough. Wednesday will be even better!"
+31:30 - "Halfway through your cooldown. You're building back up after your 20-minute breakthrough. Day 2 will be even better!"
 
 34:00 - "Workout complete! Week 6, Day 1 done! You're building the foundation for even longer continuous runs. Great work!"
 

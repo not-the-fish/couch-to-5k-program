@@ -63,11 +63,11 @@ Week 1: Use Week1_Audio_Script.txt for all 3 workouts
 Week 2: Use Week2_Audio_Script.txt for all 3 workouts
 Week 3: Use Week3_Audio_Script.txt for all 3 workouts
 Week 4: Use Week4_Audio_Script.txt for all 3 workouts
-Week 5: Use Week5_Day1 (Mon), Week5_Day2 (Wed), Week5_Day3 (Fri)
-Week 6: Use Week6_Day1 (Mon), Week6_Day2 (Wed), Week6_Day3 (Fri)
+Week 5: Use Week5_Day1 (Day 1), Week5_Day2 (Day 2), Week5_Day3 (Day 3)
+Week 6: Use Week6_Day1 (Day 1), Week6_Day2 (Day 2), Week6_Day3 (Day 3)
 Week 7: Use Week7_Audio_Script.txt for all 3 workouts
 Week 8: Use Week8_Audio_Script.txt for all 3 workouts
-Week 9: Use Week9_Day1-2 (Mon & Wed), Week9_Day3_FINAL (Fri - GRADUATION!)
+Week 9: Use Week9_Day1-2 (Days 1 & 2), Week9_Day3_FINAL (Day 3 - GRADUATION!)
 
 TECHNICAL SPECIFICATIONS
 -------------------------
@@ -97,10 +97,10 @@ MUSIC SUGGESTIONS
 CALENDAR INTEGRATION
 --------------------
 These audio scripts correspond perfectly with the ICS calendar file:
-- Week 1 Day 1: Monday June 9, 2024 → Week1_Audio_Script.txt
-- Week 1 Day 2: Wednesday June 12, 2024 → Week1_Audio_Script.txt
-- Week 1 Day 3: Friday June 14, 2024 → Week1_Audio_Script.txt
-- And so on through Week 9 Day 3: Friday August 9, 2024 → Week9_Day3_FINAL_Audio_Script.txt
+- Week 1 Day 1: June 9, 2024 → Week1_Audio_Script.txt
+- Week 1 Day 2: June 12, 2024 → Week1_Audio_Script.txt
+- Week 1 Day 3: June 14, 2024 → Week1_Audio_Script.txt
+- And so on through Week 9 Day 3: August 9, 2024 → Week9_Day3_FINAL_Audio_Script.txt
 
 MAJOR MILESTONES
 ----------------

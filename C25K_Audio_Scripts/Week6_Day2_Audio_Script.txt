@@ -15,16 +15,14 @@ Total Duration: 33 minutes (5 min warmup + 23 min intervals + 5 min cooldown)
 
 28:00 - "BEGIN walking now! INCREDIBLE! You just completed two 10-minute jogs! That's 20 minutes of total jogging with just one short break! You're ready for anything! Cool down time."
 
-30:30 - "Halfway through your cooldown. 20 minutes of jogging in just two intervals - Friday's 25-minute continuous jog is going to be amazing!"
+30:30 - "Halfway through your cooldown. 20 minutes of jogging in just two intervals - Day 3's 25-minute continuous jog is going to be amazing!"
 
 26:00 - "Workout complete! You've successfully finished Week 6, Day 2 of Couch to 5K. You're building up to another major milestone! Remember to stretch and stay hydrated. Day 3 will be amazing!"
 
-26:05 - "Your cooldown is now complete. Great job today!"
-
-33:00 - "Workout complete! Week 6, Day 2 conquered! You've just mastered 10-minute continuous jogging. Friday's 25-minute run is within your reach!"
+33:00 - "Workout complete! Week 6, Day 2 conquered! You've just mastered 10-minute continuous jogging. Day 3's 25-minute run is within your reach!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - Emphasize the 10-minute milestone achievement
-- Build excitement for Friday's 25-minute continuous run
+- Build excitement for Day 3's 25-minute continuous run
 - Celebrate the near-continuous nature (20 min with minimal break)
 - Total file duration: 33 minutes 

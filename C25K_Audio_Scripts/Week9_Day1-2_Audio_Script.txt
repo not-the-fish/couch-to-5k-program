@@ -3,7 +3,7 @@ Total Duration: 40 minutes (5 min warmup + 30 min continuous jog + 5 min cooldow
 
 ===== TIMING INSTRUCTIONS =====
 
-0:00 - "Welcome to WEEK 9! This is GRADUATION WEEK! You're about to complete 30 minutes of continuous jogging - the full C25K distance! Today and Wednesday are your final preparations for Friday's graduation ceremony. Let's warm up for this historic moment!"
+0:00 - "Welcome to WEEK 9! This is GRADUATION WEEK! You're about to complete 30 minutes of continuous jogging - the full C25K distance! Today and Day 2 are your final preparations for Day 3's graduation ceremony. Let's warm up for this historic moment!"
 
 2:30 - "Halfway through your warm-up. 30 minutes of continuous jogging awaits! You are SO ready for this!"
 
@@ -35,11 +35,11 @@ Total Duration: 40 minutes (5 min warmup + 30 min continuous jog + 5 min cooldow
 
 38:05 - "Your cooldown is now complete. Great job today!"
 
-40:00 - "Workout complete! You've just proven you can complete the full C25K program! Friday's graduation is going to be a celebration of everything you've achieved!"
+40:00 - "Workout complete! You've just proven you can complete the full C25K program! Day 3's graduation is going to be a celebration of everything you've achieved!"
 
 ===== NOTES FOR AUDIO PRODUCTION =====
 - Build maximum excitement for graduation week
 - Emphasize this as preparation for the final ceremony
 - Make the 30-minute achievement feel monumental
-- Create anticipation for Friday's graduation celebration
+- Create anticipation for Day 3's graduation celebration
 - Total file duration: 40 minutes 
